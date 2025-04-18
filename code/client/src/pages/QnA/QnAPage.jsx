@@ -1,15 +1,15 @@
-import styles from "./QnAPage.css";
+import "./QnAPage.css";
 import { useState } from "react";
 
-export const Question = ({ question, changeQuestions }) => {
+export default function QnAPage({ question, changeQuestions }) {
   const [isCorrect, setIsCorrect] = useState(-1);
   const [selectedAnswerId, setSelectedAnswerId] = useState();
   // console.log("is correct?", isCorrect);
 
   return (
-    <section className={styles.questionContainer}>
-      <h1 className={styles.questionTitle}>{question.title}</h1>
-      <div className={styles.answers}>
+    <section className="questionContainer">
+      <h1 className="questionTitle">{question.title}</h1>
+      <div className="answers">
         {question.answers.map((answer) => {
           // const answerColor =
           //   answer.id === selectedAnswerId
@@ -31,7 +31,7 @@ export const Question = ({ question, changeQuestions }) => {
                 setSelectedAnswerId(answer.id); // запомнить id кнопки после клика
               }}
               style={{ backgroundColor: answerColor }}
-              className={styles.answerButton}
+              className="answerButton"
             >
               {answer.text}
             </button>
@@ -39,7 +39,7 @@ export const Question = ({ question, changeQuestions }) => {
         })}
       </div>
       <button
-        className={styles.nextQuestionButton}
+        className="nextQuestionButton"
         type="button"
         onClick={() => {
           changeQuestions(Boolean(isCorrect));
@@ -51,4 +51,4 @@ export const Question = ({ question, changeQuestions }) => {
       </button>
     </section>
   );
-};
+}

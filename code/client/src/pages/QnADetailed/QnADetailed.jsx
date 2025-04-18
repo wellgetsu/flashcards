@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import './QnADetailed.css';
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from "react";
+import "./QnADetailed.css";
+import { useParams } from "react-router";
 
 export default function TaskDetailed() {
   const { task_id } = useParams();
@@ -23,20 +23,20 @@ export default function TaskDetailed() {
 
   if (!task && !isLoading)
     return (
-      <div className='page__container'>
-        <h1>Задача с id {task_id} не найдена</h1>
+      <div className="page__container">
+        <h1>Тема с id {task_id} не найдена</h1>
       </div>
     );
 
   if (isLoading)
     return (
-      <div className='page__container'>
+      <div className="page__container">
         <h1>Загрузка...</h1>
       </div>
     );
 
   return (
-    <div className='page__container'>
+    <div className="page__container">
       <h1>{task.title}</h1>
       <h2>{task.body}</h2>
       <h3>{new Date(task.createdAt).toLocaleString()}</h3>

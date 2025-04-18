@@ -9,7 +9,6 @@ export default function Footer() {
     <footer className="footer">
       <p onClick={() => navigate("/")}>Главная</p>
       <Link to="/profile">Профиль</Link>
-      <Link to="/QnA">QnA</Link>
     </footer>
   );
 }

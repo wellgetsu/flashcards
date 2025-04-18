@@ -1,0 +1,84 @@
+.results-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results-container h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .stat-card p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+
+  
+  .theme { background: #7CAF21; } 
+  .correct { background: #4CAF50; } 
+  .incorrect { background: #F44336; } 
+  .total { background: #2196F3; } 
+  .accuracy { background: #FFC107; color: #333; } 
+  .time { background: #9C27B0; } 
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-retry {
+    background: #2196F3;
+    color: white;
+  }
+  
+  .btn-retry:hover {
+    background: #0b7dda;
+  }
+  
+  .btn-home {
+    background: #e0e0e0;
+    color: #333;
+  }
+  
+  .btn-home:hover {
+    background: #bdbdbd;
+  }

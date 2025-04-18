@@ -21,14 +21,6 @@ export default function Header() {
       >
         Профиль
       </NavLink>
-      <NavLink
-        to="/QnA"
-        className={({ isActive }) =>
-          `header__link ${isActive ? "header__link_active" : ""}`
-        }
-      >
-        QnA
-      </NavLink>
     </header>
   );
 }

@@ -11,10 +11,13 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       user_id: {
-        type: Sequelize.STRING,
-      },
-      count: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "Users",
+          key: "id",
+        },
+        onDelete: "CASCADE",
       },
       topic_id: {
         type: Sequelize.INTEGER,
@@ -22,7 +25,11 @@ module.exports = {
           model: "Topics",
           key: "id",
         },
-        onDelete: "cascade",
+        onDelete: "CASCADE",
+      },
+      count: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
       },
       createdAt: {
         allowNull: false,
@@ -35,7 +42,12 @@ module.exports = {
         defaultValue: Sequelize.fn("NOW"),
       },
     });
+
+    // Добавляем индексы для внешних ключей
+    await queryInterface.addIndex("Statistics", ["user_id"]);
+    await queryInterface.addIndex("Statistics", ["topic_id"]);
   },
+
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("Statistics");
   },

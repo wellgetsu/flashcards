@@ -3,7 +3,7 @@ const TaskController = require('../controllers/Task.controller');
 
 router
   //* Метод GET - получить все задачи (запустит функцию контроллер для получения всех задач)
-  .get('/', TaskController.getAllTasks)
+  // .get('/', TaskController.getAllTasks)
 
   //* Метод GET - получить задачу по ID (запустит функцию контроллер для получения задачи по id)
   .get('/:id', TaskController.getTaskById)

@@ -8,6 +8,7 @@ import QnAPage from "./pages/QnA/QnAPage";
 import ProfilePage from "./pages/Profile/ProfilePage";
 import Root from "./app/Root";
 import QnADetailed from "./pages/QnADetailed/QnADetailed";
+import ResultsPage from "./pages/Results/ResultsPage";
 
 //* React-компонент
 function App() {
@@ -20,6 +21,7 @@ function App() {
         { path: "/profile", Component: ProfilePage },
         { path: "/QnA", Component: QnAPage },
         { path: "/QnA/:task_id", Component: QnADetailed },
+        { path: "/results", Component: ResultsPage },
       ],
     },
   ]);
